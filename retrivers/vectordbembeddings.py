@@ -38,7 +38,7 @@ for r in result:
 
 retriver = vectorstore.as_retriever(); # Retriver (Default Similarity Search)
 
-docs = retriver.invoke("Explain deep learning"); # Runable (Chain)
+docs = retriver.invoke("Explain deep learning");
 
 for d in docs:
 
