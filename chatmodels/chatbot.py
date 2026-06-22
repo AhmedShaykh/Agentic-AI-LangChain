@@ -1,4 +1,4 @@
-from langchain_core.messages import AIMessage, SystemMessage , HumanMessage;
+from langchain_core.messages import AIMessage, SystemMessage, HumanMessage;
 from langchain_mistralai import ChatMistralAI;
 from dotenv import load_dotenv;
 
