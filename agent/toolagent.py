@@ -73,7 +73,7 @@ llm_with_tool = llm.bind_tools([get_weather, get_news]);
 
 message = [];
 
-print("Type City | Type Exit To Quit");
+print("Type Your City | Type Exit To Quit");
 
 while True:
 

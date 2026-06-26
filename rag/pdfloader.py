@@ -1,4 +1,5 @@
 from langchain_community.document_loaders import PyPDFLoader;
+from rich import print;
 
 data = PyPDFLoader("rag/docs/langchain.pdf");
 

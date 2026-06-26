@@ -38,8 +38,8 @@ final_prompt = prompt.invoke({
     "format_instructions": parser.get_format_instructions()
 });
 
-response = model.invoke(final_prompt)
+response = model.invoke(final_prompt);
 
-movie_data = parser.parse(response.content)
+movie_data = parser.parse(response.content);
 
 print(json.dumps(movie_data.model_dump(), indent=2)); # Structure Output

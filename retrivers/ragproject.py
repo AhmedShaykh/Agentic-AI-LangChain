@@ -1,7 +1,7 @@
 from langchain_google_genai import GoogleGenerativeAIEmbeddings;
 from langchain_core.prompts import ChatPromptTemplate;
-from langchain_community.vectorstores import Chroma;
 from langchain_mistralai import ChatMistralAI;
+from langchain_chroma import Chroma;
 from dotenv import load_dotenv;
 import chromadb;
 import os;
@@ -20,7 +20,7 @@ chroma_client = chromadb.CloudClient(
 );
 
 vectorstore = Chroma(
-    collection_name="langchain_vectorembeddings",
+    collection_name="langchain_vectorembedding",
     embedding_function=embedding_model,
     client=chroma_client
 );
@@ -48,7 +48,7 @@ prompt = ChatPromptTemplate.from_messages([
                 {question}""")
 ]);
 
-print("RAG System Ready");
+print("RAG System Is Ready");
 
 print("Press 0 To Exit\n");
 

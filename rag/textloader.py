@@ -1,4 +1,5 @@
 from langchain_community.document_loaders import TextLoader;
+from rich import print;
 
 data = TextLoader("rag/docs/notes.txt");
 

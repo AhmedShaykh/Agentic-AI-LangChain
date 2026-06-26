@@ -1,6 +1,7 @@
 from langchain_community.document_loaders import WebBaseLoader;
+from rich import print;
 
-url = "https://www.apple.com/macbook-pro/";
+url = "https://xyfora-website.vercel.app/";
 
 data = WebBaseLoader(url);
 

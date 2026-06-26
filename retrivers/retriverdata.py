@@ -1,7 +1,7 @@
 from langchain_classic.retrievers.multi_query import MultiQueryRetriever;
 from langchain_google_genai import GoogleGenerativeAIEmbeddings;
-from langchain_community.vectorstores import Chroma;
 from langchain_mistralai import ChatMistralAI;
+from langchain_chroma import Chroma;
 from dotenv import load_dotenv;
 import chromadb;
 import os;
@@ -20,7 +20,7 @@ chroma_client = chromadb.CloudClient(
 );
 
 vectorstore = Chroma(
-    collection_name="langchain_retrieversembeddings",
+    collection_name="langchain_retrieverembedding",
     embedding_function=embedding_model,
     client=chroma_client
 );

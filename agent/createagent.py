@@ -1,5 +1,5 @@
-from langchain_core.messages import HumanMessage, ToolMessage;
 from langchain.agents.middleware import wrap_tool_call;
+from langchain_core.messages import ToolMessage;
 from langchain_mistralai import ChatMistralAI;
 from langchain.agents import create_agent;
 from langchain.tools import tool;
@@ -90,11 +90,11 @@ def human_approval(request, handler):
 agent = create_agent(
     llm,
     tools = [get_weather, get_news], # Bind Tools
-    system_prompt= "You Are A Helpful AI Assistant.",
-    middleware= [human_approval]
+    system_prompt = "You Are A Helpful AI Assistant.",
+    middleware = [human_approval]
 );
 
-print("Type City | Type Exit To Quit");
+print("Type Your City | Type Exit To Quit");
 
 while True:
 

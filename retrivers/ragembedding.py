@@ -1,7 +1,7 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter;
 from langchain_google_genai import GoogleGenerativeAIEmbeddings;
 from langchain_community.document_loaders import PyPDFLoader;
-from langchain_community.vectorstores import Chroma;
+from langchain_chroma import Chroma;
 from dotenv import load_dotenv;
 import chromadb;
 import os;
@@ -31,8 +31,8 @@ chroma_client = chromadb.CloudClient(
 );
 
 vectorstore = Chroma.from_documents(
-    collection_name="langchain_vectorembeddings",
-    documents=docs,
+    collection_name="langchain_vectorembedding",
+    documents=chunks,
     embedding=embedding_model,
     client=chroma_client
 );

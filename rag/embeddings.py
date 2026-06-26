@@ -12,7 +12,7 @@ embeddings = GoogleGenerativeAIEmbeddings(
 
 texts = [
     "Hello! I'm Ahmed Shaykh",
-    "I'm Learning LangChain With Embeddings"
+    "I'm Learning LangChain"
 ];
 
 vector = embeddings.embed_documents(texts);

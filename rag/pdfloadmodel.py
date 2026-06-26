@@ -10,13 +10,13 @@ data = PyPDFLoader("rag/docs/langchain.pdf");
 docs = data.load();
 
 template = ChatPromptTemplate.from_messages([
-    ("system", "you are a AI that summarizes the text"),
+    ("system", "You are a AI that summarizes the text"),
     ("human", "{data}")
 ]);
 
 model = ChatGroq(model="llama-3.3-70b-versatile");
 
-prompt = template.format_messages(data= docs[0].page_content);
+prompt = template.format_messages(data = docs[0].page_content);
 
 result = model.invoke(prompt);
 

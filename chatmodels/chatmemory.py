@@ -1,6 +1,7 @@
 from langchain_core.messages import AIMessage, SystemMessage, HumanMessage;
 from langchain_mistralai import ChatMistralAI;
 from dotenv import load_dotenv;
+from rich import print;
 
 load_dotenv();
 
@@ -29,7 +30,7 @@ elif choice == 3:
 
     mode = "You Are An Sad AI Agent. You Respond In A Depressed & Amotional Tone.";
 
-messages = [
+messages = [ # Memory
     SystemMessage(content=mode)
 ];
 
@@ -39,11 +40,11 @@ while True:
 
     prompt = input("You : ");
 
-    messages.append(HumanMessage(content=prompt));
-
     if prompt == "0":
 
         break;
+
+    messages.append(HumanMessage(content=prompt));
 
     response = model.invoke(messages);
 

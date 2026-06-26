@@ -1,12 +1,12 @@
-from langchain_community.tools.tavily_search import TavilySearchResults;
 from langchain_core.output_parsers import StrOutputParser;
 from langchain_core.prompts import ChatPromptTemplate;
 from langchain_mistralai import ChatMistralAI;
+from langchain_tavily import TavilySearch;
 from dotenv import load_dotenv;
 
 load_dotenv();
 
-search_tool = TavilySearchResults(max_result = 5); # Pre Built In Tool
+search_tool = TavilySearch(max_result = 5); # Pre Built In Tool But Require Tavily API
 
 llm = ChatMistralAI(model = "mistral-small-2506");
 

@@ -23,14 +23,14 @@ explain_prompt = ChatPromptTemplate.from_messages([
 seq = code_prompt | model | parser;
 
 seq2 = RunnableParallel({
-    "code" :  RunnablePassthrough(), # Same Thing Pass Same Thing Return
+    "code" :  RunnablePassthrough(), # Same Thing Pass As Same Thing Return (Code)
     "explanation" : explain_prompt | model | parser
 });
 
 chain = seq | seq2;
 
 result = chain.invoke({
-    "topic" : "Please Write A Code Of Lamdba Function Print Hello In Python"
+    "topic" : "Please Write A Code Of Lamdba Function Hello Print In Python"
 });
 
 print(f"\n Code: {result["code"]}");
