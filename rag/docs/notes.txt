@@ -1,0 +1,7 @@
+Generative AI refers to a class of artificial intelligence systems designed to create new, original content—such as text, code, images, or audio—based on patterns learned from massive datasets. Unlike traditional AI, which focuses primarily on analyzing data or making predictions, Generative AI actively produces novel outputs in response to user prompts.
+
+At the heart of modern Generative AI are foundation models and deep learning architectures, most notably Transformers. Large Language Models (LLMs) like GPT, Gemini, and Llama use these architectures to understand context and predict the next logical sequence of tokens, allowing them to generate highly coherent and human-like text.
+
+One of the biggest challenges with LLMs is their tendency to "hallucinate" or provide outdated information. To solve this, developers use Retrieval-Augmented Generation (RAG), a technique that allows the AI to search through external documents or databases to find factual context before generating its final answer.
+
+The next major evolution in this field is Agentic AI. While standard Generative AI simply waits for a prompt and returns an answer, AI Agents are equipped with tools and reasoning loops that allow them to autonomously plan tasks, search the web, execute code, and solve complex, multi-step problems with minimal human intervention.
